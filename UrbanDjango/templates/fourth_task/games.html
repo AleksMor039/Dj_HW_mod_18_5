@@ -1,0 +1,15 @@
+{% extends "menu.html" %}
+
+{% block page-name %}
+    <h1>Игры</h1>
+{% endblock %}
+{% block menu %}
+    {{block.super}}
+{% endblock %}
+{% block content %}
+    {% for key, value in mydict_games.items %}
+        {% for i in value %}
+            <p>{{ i }}<button>Купить</button> </p>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
